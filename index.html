@@ -502,14 +502,15 @@ const bannertextK= document.getElementById('bannertextK');
     let scrollY = window.scrollY;
     if (900 < scrollY) {
         bannertextS.classList.add('on');
-        bannertextK.classList.add('on');
         sponagologo.classList.add('ap');
-        carlerlogo.classList.add('ap');
     }
-    if (1200 < scrollY) {
+    if (1300 < scrollY) {
+      bannertextK.classList.add('on');
+      carlerlogo.classList.add('ap');
+    }
+    if (1500 < scrollY) {
         bannertextR.classList.add('on');
         ranpulogo.classList.add('ap');
-        
     }
 });
 
@@ -567,7 +568,7 @@ const bannertextK= document.getElementById('bannertextK');
   
   window.addEventListener('scroll',()=>{
     let scrollY = window.scrollY;
-    if (3700 < scrollY) {
+    if (3900 < scrollY) {
         finalText.classList.add('again');
         lastimgbox.classList.add('fadeup');
     }
