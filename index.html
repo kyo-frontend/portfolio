@@ -422,26 +422,27 @@ animation-fill-mode: forwards;}
   20%,100% {opacity: 1;}
 }
 /* スマートフォン向けのスタイル */
- @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   body{font-size: 62.5%;  max-width: 600px;}
-  .backColor{width: 250px; height: 250px;}
-  .name{font-size: 3rem; left: 180px;}
+  .backColor{width: 250px; height: 250px;
+  margin: 70 auto 0 auto;}
+  .name{font-size: 2.5rem; left: 100px;}
   .profbox{margin: 0 auto;
-  width: 92vw;}
+  width: 92vw; height: auto; padding-bottom: 50px;}
   .proftitle,.worktitle,.lastTitle{font-size: 1.7rem;}
   .proftext{font-size: 1.2rem; width: 85vw;
     margin-left: 30px; margin-top: 30px;}
-  .imgbox{top: 630px; left: 220px;
-  width: 230px; height: 320px;}
+  .imgbox{top: 630px; left: 200px;
+  width: 170px; height: 250px;}
   .skillbox{margin: 70 auto; 
-    width: 92vw;}
+    width: 92vw; height: auto; padding-bottom: 50px;}
   .skillbox ul{margin-top: 0px;}
-  .skillbox li{font-size: 1.2rem;}
+  .skillbox li{font-size: 1.2rem; margin-left: 0;}
   .bannerbox{display: flex; flex-direction: column;
     margin-bottom: 50px;}
   .skilltext{font-size: 1.2rem; width: 85vw; margin-left: 30px;}
   .backColorR{display: none;}
-  .backColorBa{height: 3rem; font-size: 2rem;}
+  .backColorBa{height: 3.5rem; font-size: 3rem;}
   #buttonbox{width: 30px; height: 30px;
     top: 0px;}
   #closeButton{font-size: 1.5rem; margin: 5px 5px;}
