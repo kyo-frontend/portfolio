@@ -278,8 +278,8 @@ animation: borderFlash 4s linear infinite alternate;
 box-sizing: border-box;}
 @keyframes borderFlash{
    0% {border: 5px solid #FF0033;}
-   50% {border: 7px double #FF0033;}
-   75% {border: 5px solid #FF0033;}
+   40% {border: 5px double #FF0033;}
+   70% {border: 5px solid #FF0033;}
  100% {border: 5px solid #ffffff;}
 }
 #logo img{object-fit: cover; width: 90%;　opacity: 0;}
@@ -426,7 +426,8 @@ animation-fill-mode: forwards;}
 }
 /* スマートフォン向けのスタイル */
 @media only screen and (max-width: 600px) {
-  body{font-size: 62.5%;  max-width: 600px;}
+ body{font-size: 62.5%;  max-width: 600px;
+  box-sizing: border-box;}
   .backColor{width: 250px; height: 250px;
   margin: 70 auto 0 auto;}
   .name{font-size: 2.5rem; left: 100px;}
@@ -447,7 +448,7 @@ animation-fill-mode: forwards;}
   .skilltext{font-size: 1.2rem; width: 85vw; margin-left: 30px;}
   .backColorR{display: none;}
   .backColorBa{height: 3.5rem; font-size: 3rem;}
-  #logo{max-height: 250px; box-sizing: border-box;}
+  #logo{max-height: 250px;}
   #buttonbox{width: 30px; height: 30px;
     top: -30px; right: 50px;}
   #closeButton{font-size: 1.5rem; margin: 5px 5px;}
