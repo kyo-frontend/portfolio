@@ -1,5 +1,5 @@
 <html>
- <head>
+  <head>
     <meta charset="uft-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -91,7 +91,8 @@
     <div id="btn">＞　トップ画像へ戻る</div>
    </div>
    <div class="switchimg">
-     <span class="worktitle">SUBPAGE</span><br>
+    <p class="explan"><span class="worktitle">SUBPAGE</span><br> 
+     バナーをクリックすると画像が切り替わります。</p>
      <img id="kodawariimg" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/03/珈琲豆　源ネオン文字）.png">
      <img id="saiyouimg" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/03/らんぷ　採用情報文字加工済.png">
      <img id="otoiawaseimg" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/03/悩む　お問い合わせ用（文字加工）.png">
@@ -268,12 +269,18 @@ z-index: 4;
     }
 .bannerbox{display: flex; justify-content: space-around;
  margin-bottom: 50px; z-index: 3;}
-
 #logo{background-color: black;
 max-width: 550px; max-height: 300px;
 cursor: pointer;
 display: flex; justify-content: center;
 align-items: center; flex-basis: 50%;
+animation: borderFlash 4s linear infinite alternate;
+box-sizing: border-box;}
+@keyframes borderFlash{
+   0% {border: 5px solid #FF0033;}
+   50% {border: 7px double #FF0033;}
+   75% {border: 5px solid #FF0033;}
+ 100% {border: 5px solid #ffffff;}
 }
 #logo img{object-fit: cover; width: 90%;　opacity: 0;}
 #logo img:hover{transform:scale(1.2);
@@ -443,7 +450,7 @@ animation-fill-mode: forwards;}
   .skilltext{font-size: 1.2rem; width: 85vw; margin-left: 30px;}
   .backColorR{display: none;}
   .backColorBa{height: 3.5rem; font-size: 3rem;}
-  #logo{max-height: 250px;}
+  #logo{max-height: 250px; box-sizing: border-box;}
   #buttonbox{width: 30px; height: 30px;
     top: -30px; right: 50px;}
   #closeButton{font-size: 1.5rem; margin: 5px 5px;}
@@ -455,8 +462,7 @@ animation-fill-mode: forwards;}
   .ranpuImg img {width: 90vw;}
   .ranpuRbox{margin-left: 10px; width: 90vw;}
   .switchimg img{width: 150px; max-height: 180px;}
-  .explan{margin-top: -30px;
-    font-size: 1rem;}
+  .explan{font-size: 1rem;}
   .lastbox{margin: 50 auto; width: 94vw;}
   #lastimgbox{width: 200px; height: 270px;
     margin: 0 auto;}
