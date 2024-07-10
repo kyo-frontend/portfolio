@@ -488,10 +488,12 @@ imgbox.addEventListener('animationend', () => {
     const closeButton = document.getElementById('closeButton')
 
  logo.addEventListener('click', function () {
-            suponagoPage.style.display = 'block';
-            buttonbox.style.display = 'block';
+        suponagoPage.style.display = 'block';
+        buttonbox.style.display = 'block';
+            // hiddenpageまでスクロール
+        suponagoPage.scrollIntoView({ behavior: 'smooth' });
         });
-    buttonbox.addEventListener('click',function(){
+ buttonbox.addEventListener('click',function(){
         suponagoPage.style.display = 'none';
         buttonbox.style.display = 'none';
     });
@@ -501,7 +503,7 @@ imgbox.addEventListener('animationend', () => {
   
 const bannertextS= document.getElementById('bannertextS');
 const bannertextK= document.getElementById('bannertextK');
-  const bannertextR= document.getElementById('bannertextR');
+const bannertextR= document.getElementById('bannertextR');
   
     window.addEventListener('scroll',()=>{
     let scrollY = window.scrollY;
@@ -530,6 +532,7 @@ const bannertextK= document.getElementById('bannertextK');
   function showSecondimg(){
     topimg.style.display = 'none';
     secondimg.style.display = 'block';
+    secondimg.scrollIntoView({ behavior: 'smooth' });
     thirdimg.style.display = 'none';
     fourthimg.style.display = 'none';
     btn_box.style.display = 'block';
@@ -541,6 +544,7 @@ const bannertextK= document.getElementById('bannertextK');
     topimg.style.display = 'none';
     secondimg.style.display = 'none';
     thirdimg.style.display = 'block';
+    thirdimg.scrollIntoView({ behavior: 'smooth' });
     fourthimg.style.display = 'none';
     btn_box.style.display = 'block';
   }
@@ -552,6 +556,7 @@ const bannertextK= document.getElementById('bannertextK');
     secondimg.style.display = 'none';
     thirdimg.style.display = 'none';
     fourthimg.style.display = 'block';
+    fourthimg.scrollIntoView({ behavior: 'smooth' });
     btn_box.style.display = 'block';
   }
   const otoiawaseswitch = document.getElementById('otoiawaseimg');
