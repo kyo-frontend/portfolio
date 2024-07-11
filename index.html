@@ -529,44 +529,43 @@ const bannertextR= document.getElementById('bannertextR');
   const fourthimg = document.getElementById('fourthimg')
   const btn_box = document.getElementById('btn_box');
   const btn = document.getElementById('btn');
+  const images =  [topimg, secondimg, thirdimg, fourthimg];
+  
+  function hideImages() {
+    images.forEach(function(pic) {pic.style.display = 'none';});
+  }
+  function showBtn(){btn_box.style.display = 'block';}
   
   function showSecondimg(){
-    topimg.style.display = 'none';
+    hideImages();
     secondimg.style.display = 'block';
     secondimg.scrollIntoView({ behavior: 'smooth' });
-    thirdimg.style.display = 'none';
-    fourthimg.style.display = 'none';
-    btn_box.style.display = 'block';
+    showBtn();
   }
   const kodawariswitch = document.getElementById('kodawariimg');
-  kodawariswitch.addEventListener('click',  showSecondimg);
+  kodawariswitch.addEventListener('click', showSecondimg);
   
   function showThirdimg(){
-    topimg.style.display = 'none';
-    secondimg.style.display = 'none';
+    hideImages();
     thirdimg.style.display = 'block';
     thirdimg.scrollIntoView({ behavior: 'smooth' });
-    fourthimg.style.display = 'none';
-    btn_box.style.display = 'block';
+    showBtn();
   }
   const saiyouswitch = document.getElementById('saiyouimg');
   saiyouswitch.addEventListener('click',  showThirdimg);
   
   function show4thimg(){
-    topimg.style.display = 'none';
-    secondimg.style.display = 'none';
-    thirdimg.style.display = 'none';
+    hideImages();
     fourthimg.style.display = 'block';
     fourthimg.scrollIntoView({ behavior: 'smooth' });
-    btn_box.style.display = 'block';
+    showBtn();
   }
   const otoiawaseswitch = document.getElementById('otoiawaseimg');
   otoiawaseswitch.addEventListener('click',  show4thimg);
   
   function backtoTop(){
+    hideImages();
     topimg.style.display = 'block';
-    secondimg.style.display = 'none';
-    thirdimg.style.display = 'none';
     btn_box.style.display = 'none';
   }
   btn_box.addEventListener('click',backtoTop);
