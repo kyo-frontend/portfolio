@@ -84,7 +84,7 @@
    <img id="fourthimg" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/03/FireShot-Capture-012-Copy-らんぷ　お問い合わせ-xs311218.xsrv_.jp_.png">
   </div>
 
-  <div class="ranpuRbox">
+ <div class="ranpuRbox">
    <p class="explan"><span class="worktitle">TOP PAGE</span><br>
      JavaScriptを使って背景画像を時間差で別の画像に変えたり、手動で切り替えできるように設定しました。<br>
      ページの右上と最下層にメニューバーを設定し、他のページにも移れるようにしました。</p>
@@ -94,10 +94,12 @@
    <div class="switchimg">
     <p class="explan"><span class="worktitle">SUBPAGE</span><br> 
      バナーをクリックすると画像が切り替わります。</p>
-     <img id="kodawariimg" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/03/珈琲豆　源ネオン文字）.png">
-     <img id="saiyouimg" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/03/らんぷ　採用情報文字加工済.png">
-     <img id="otoiawaseimg" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/03/悩む　お問い合わせ用（文字加工）.png">
-    </div>
+     <div class="aiconbox">
+      <img id="kodawariimg" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/03/珈琲豆　源ネオン文字）.png">
+      <img id="saiyouimg" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/03/らんぷ　採用情報文字加工済.png">
+      <img id="otoiawaseimg" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/03/悩む　お問い合わせ用（文字加工）.png">
+     </div> 
+   </div>
   </div>
  </div>
 
@@ -424,6 +426,17 @@ animation-fill-mode: forwards;}
     opacity: 0;}
   100% {transform: translate(0,0);}
   20%,100% {opacity: 1;}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+  body{width: 95vw;}
+  #logo{max-width: 45vw;}
+  .bannertext{font-size: 2vw;}
+  .flexboxTop{flex-direction: column-reverse;}
+  .ranpuRbox{margin-left:0; width: 90vw;}
+  .explan{font-size: 2vw;}
+  .aiconbox{display: flex; justify-content: space-around;}
+  .switchimg img{width: 150px; max-height: 180px; margin-bottom: 30px;}
 }
 /* スマートフォン向けのスタイル */
 @media only screen and (max-width: 600px) {
