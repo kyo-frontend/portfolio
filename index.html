@@ -114,6 +114,7 @@
 </div>
  </html>
 <style>
+body{box-sizing: border-box;}
 .allContainer{max-width: 1000px;
 position: relative;}
 
@@ -220,7 +221,7 @@ font-size: 120%;
 height: 400px;
 margin-top: 50px;
 margin-left: 220px;
-margin-bottom: 50px;/* VSコード用のmargin*/
+margin-bottom: 50px;
 border: 2px solid black; 
 z-index: 4;
 }
@@ -265,15 +266,14 @@ z-index: 4;
   0% {transform: translateX(500px);}
     100% {transform: translateX(-100%);}
     }
-.bannerbox{display: flex; justify-content: space-around;
+.bannerbox{display: flex; justify-content: center;
  margin-bottom: 50px; z-index: 3;}
 
 #logo{background-color: black; max-width: 550px;  max-height: 300px;
-cursor: pointer;  margin-right: 70px;
-display: flex; justify-content: center; /*中央寄せのためにflexをかけている*/
-align-items: center;
-animation: borderFlash 4s linear infinite alternate;
-box-sizing: border-box;}
+ display: flex; justify-content: center; /*中央寄せのためにflexをかけている*/
+ margin-right: 70px; cursor: pointer;
+align-items: center; 
+animation: borderFlash 4s linear infinite alternate;}
 @keyframes borderFlash{
    0%  {border: 5px solid #FF0033;}
    40% {border: 5px double#FF0033;}
@@ -299,8 +299,7 @@ transition: 0.4s;}
 .bannertext{font-size: 120%; max-width: 55%;
   opacity: 0; transition: 4s;}
 .bannertext.on{visibility: inherit;
-  animation: appearText 1s forwards;
-         }
+  animation: appearText 1s forwards;}
  @keyframes appearText {
   0% {transform: translateY(50px);
      opacity: 0.1;}
@@ -308,18 +307,16 @@ transition: 0.4s;}
   100% {transform: translateY(0);
     opacity: 1;}
 }
-.bannertitle{font-size: 40px;
-color: #FF0033;
-font-family: Georgia;
-}
+.bannertitle{font-size: 40px; font-family: Georgia;
+color: #FF0033;}
 .teachP{border-bottom: double 6px #FF367F;}
+
 .hiddenpage{position: relative;}
 #page{display: none; position: relative;
 z-index: 1; object-fit: cover;
 width: 95%;}
-#buttonbox {position: absolute;
-            top: 20px; right: 100px;
-            cursor: pointer;
+#buttonbox {position: absolute; top: 20px; right: 100px;
+            display: none; cursor: pointer;
             background-color: #663300;
             padding: 3px;
             width: 50px; height: 50px;
@@ -327,7 +324,6 @@ width: 95%;}
             border-bottom: 4px solid #004400;
             border-right: 4px solid #004400;
              border-radius: 50%;
-            display: none;
             animation: slidebatsu 6s linear infinite;
         }
 @keyframes slidebatsu{
@@ -418,6 +414,7 @@ animation-fill-mode: forwards;}
   100% {transform: translate(0,0);}
   20%,100% {opacity: 1;}
 }
+
 @media screen and (max-width: 1000px){
   body{font-size: 62.5%; box-sizing: border-box;}
   .profbox{margin: 0 auto; padding-bottom: 20px;
@@ -436,6 +433,7 @@ animation-fill-mode: forwards;}
   .imgbox{position: relative; top: 0px; left: 400px;
     z-index: 3; margin-bottom: -200px;
   width: 250px; height: 350px;}
+  
   #logo{max-width: 45vw; margin-right: 0;}
   #logo img{width: 90%;} 
   .bannertext{font-size: 1rem;}
@@ -443,7 +441,8 @@ animation-fill-mode: forwards;}
   .ranpuRbox{margin-left:0; width: 90vw;}
   .aiconbox{display: flex; justify-content: space-around;}
   .switchimg img{width: 150px; max-height: 180px; margin-bottom: 30px;}
-   #lastimgbox{width: 300px; height: 400px;}
+   #lastimgbox{width: 200px; height: 300px;margin: -300 0 0 auto;} 
+   .lasttext{width: 50%;} /* 真ん中のブレイク限定のclass */
 }
 /* スマートフォン向けのスタイル */
 @media only screen and (max-width: 600px) {
@@ -476,7 +475,6 @@ animation-fill-mode: forwards;}
   #lastimgbox{width: 200px; height: 270px;
     margin: 0 auto;}
   }
-
 </style>
 
 <script>
