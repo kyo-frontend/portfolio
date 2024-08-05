@@ -417,6 +417,7 @@ animation-fill-mode: forwards;}
 
 @media screen and (max-width: 1000px){
   body{font-size: 62.5%; box-sizing: border-box;}
+  .allContainer{max-width: 100vw;}
   .profbox{margin: 0 auto; padding-bottom: 20px;
     width: 92vw; height: auto;}
   .proftext{width: 90%;}
@@ -435,15 +436,19 @@ animation-fill-mode: forwards;}
   width: 250px; height: 350px;}
   .backColorR{position: absolute; top: 600px; left: 550px;
     width: 250px; height: 360px;}
-  #logo{min-width: 300px; margin-right: 0;}
+  #logo{min-width: 450px; margin-right: 0;}
   #logo img{width: 90%;} 
   .bannertext{font-size: 1rem;}
   .flexboxTop{flex-direction: column-reverse;}
   .ranpuRbox{margin-left:0; width: 90vw;}
   .aiconbox{display: flex; justify-content: space-around;}
   .switchimg img{width: 150px; max-height: 180px; margin-bottom: 30px;}
-   #lastimgbox{width: 32%; height: auto; margin: -350 0 0 auto;} 
-   .lasttext{width: 60%;} /* 真ん中のブレイク限定のclass */
+   #lastimgbox{width: 34%; height: auto; margin: -350 0 0 auto;} 
+   .lasttext{width: 58%;} /* 真ん中のブレイク限定のclass */
+}
+@media screen and (min-width: 600px) and (max-width: 850px){
+  .bannerbox{display: flex; flex-direction: column;}
+  .bannertext{max-width: none;  margin-left: 30px;}
 }
 /* スマートフォン向けのスタイル */
 @media only screen and (max-width: 600px) {
