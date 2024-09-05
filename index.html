@@ -66,7 +66,18 @@
       ひとりでケアと闘うことのつらさを、テキストが遅れて出てくるアニメーションで表現してみました。ケアラーは頑張りすぎているという励ましのメッセージ、仲間と出会うことで救われる部分があることをJavaScriptのアニメーション等で表現してみました。<br>
       <span class="teachP">なお、ロゴをクリックすると、WEBページに移動します。</span></p>
   </div>
-
+ <div class="bannerbox">
+    <div id ="logo"><a href="">
+     <img id="rockmanlogo" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/09/ロックマンXD.png" ></a>
+    </div>
+    <p class ="bannertext" id="bannertextRo">
+     <span class="bannertitle">ABOUT</span><br>
+     HTML、CSS、JavaScriptを使ってロックマンのキャラクターによるゲーム風のアニメーションを作ってみました。
+     JavaScriptで連射されるビームを作り、攻撃されたウッドマンが徐々に後ずさる動きをCSSのアニメーションで再現しました。
+     ワイリーが消えたり、移動して再出現する動きもJavaScriptで実装しました。<br>
+       <span class="teachP">なお、ロゴをクリックすると、WEBページに移動します。</span></p>
+   </div>
+  
   <div class="bannerbox">
    <div id="logo"><a href="https://xs311218.xsrv.jp/sample/elementor-1037/">
     <img id="ranpulogo" src="http://xs311218.xsrv.jp/sample/wp-content/uploads/2024/03/らんぷ.png" >
@@ -282,7 +293,7 @@ animation: borderFlash 4s linear infinite alternate;}
    70% {border: 5px solid #FF0033;}
   100% {border: 5px solid #ffffff;}
 }
-#sponagologo,#carlerlogo,#ranpulogo{object-fit: cover; width: 480px; 
+#sponagologo,#carlerlogo,#rockmanlogo,#ranpulogo{object-fit: cover; width: 480px; 
      opacity: 0;}
 #logo img:hover{transform:scale(1.2);
 transition:0.4s;}
@@ -300,7 +311,7 @@ transition: 0.4s;}
   transform: translateY(0);}
 .bannertext{font-size: 120%; max-width: 55%;
   opacity: 0; transition: 4s;}
-.bannertext.on{visibility: inherit;
+.on{visibility: inherit;
   animation: appearText 1s forwards;}
  @keyframes appearText {
   0% {transform: translateY(50px);
@@ -500,7 +511,8 @@ imgbox.addEventListener('animationend', () => {
     const suponagoPage = document.getElementById('page')
     const logo = document.getElementById('logo') 
     const sponagologo = document.getElementById('sponagologo') 
-    const carlerlogo = document.getElementById('carlerlogo')
+    const carlerlogo  = document.getElementById('carlerlogo')
+    const rockmanlogo = document.getElementById('rockmanlogo')
     const ranpulogo = document.getElementById('ranpulogo')
     const buttonbox = document.getElementById('buttonbox')
     const closeButton = document.getElementById('closeButton')
@@ -516,11 +528,10 @@ imgbox.addEventListener('animationend', () => {
         buttonbox.style.display = 'none';
     });
 
-
-//スクロールイベントによるテキスト、ロゴ表示
-  
+//スクロールイベントによるテキスト、ロゴ表示 
 const bannertextS= document.getElementById('bannertextS');
 const bannertextK= document.getElementById('bannertextK');
+const bannertextRo= document.getElementById('bannertextRo');
 const bannertextR= document.getElementById('bannertextR');
   
     window.addEventListener('scroll',()=>{
@@ -533,7 +544,11 @@ const bannertextR= document.getElementById('bannertextR');
       bannertextK.classList.add('on');
       carlerlogo.classList.add('ap');
     }
-    if (1500 < scrollY) {
+    if (1600 < scrollY) {
+      bannertextRo.classList.add('on');
+      rockmanlogo.classList.add('on');
+    }
+    if (2000 < scrollY) {
         bannertextR.classList.add('on');
         ranpulogo.classList.add('ap');
     }
