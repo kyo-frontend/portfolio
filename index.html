@@ -5,9 +5,8 @@
   </head>
  <div class="allContainer">
   <div class="backColor"></div> 
-  <p class="name">
-     野田  京介<br>
-    kyosuke noda</p>
+  <div class="namebox">
+    <p class="nametitle">京</p></div>
  <div class="profbox">
    <p class="proftitle">　PROFILE</p>
    <p class="proftext">大学卒業後は政府系金融機関で事業性融資の仕事に携わっていたが、家族の高齢化により家族のケアと仕事の両立が難しくなり、
@@ -155,16 +154,17 @@ position: relative;}
   100% {transform: rotate(135deg)scale(1);
         opacity: 1;}
   }
-.name{font-weight: bold;
-     font-family: serif;
-     font-size: 55px;
+.namebox{font-weight: bold; font-family: serif;
+     font-size: 60px; color: white;
      position: absolute; top: -20px; left: 280px;
 }
+.nametitle{font-weight: bold; font-size: 120px; 
+text-shadow: 1px 1px rgb(218, 239, 23);}
 .profbox{
     background-color: black;
     width : 800px;  height: 500px;
     border: 2px solid rgb(239, 10, 10);
-    margin-top: -100px; margin-left: 330px;
+    margin-top: -80px; margin-left: 330px;
     margin-right: 260px;
     position: relative; 
     z-index: 2;
