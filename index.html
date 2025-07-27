@@ -10,8 +10,10 @@
     kyosuke noda</p>
  <div class="profbox">
    <p class="proftitle">　PROFILE</p>
-   <p class="proftext">大学卒業後は政府系金融機関で事業性融資の仕事に携わっていたが、家族の高齢化により家族のケアと仕事の両立が難しくなり、人生の分岐点に差し掛かる。<br>
-    家族のために子どもとしての時間を犠牲にする、ヤングケアラーの上の世代、若者ケアラーと呼ばれる存在であることを知り、若者ケアラー同士の座談会に参加したり、ITフリーランスの方との交流会を通じて、自分らしい働き方を志すようになる。<br>
+   <p class="proftext">大学卒業後は政府系金融機関で事業性融資の仕事に携わっていたが、家族の高齢化により家族のケアと仕事の両立が難しくなり、
+    人生の分岐点に差し掛かる。<br>
+    家族のために子どもとしての時間を犠牲にする、ヤングケアラーの上の世代、若者ケアラーであることを知り、若者ケアラー同士の座談会への参加、
+    ITフリーランスの方との交流会を通じて、自分らしい働き方を志すようになる。<br>
     障害福祉サービス事業所でWordpressやコーディングを使ったWEBサイト制作、Photoshopによるポスターなどのグラフィックデザインを学び、実務に準じた経験を積む。ITを使った金融支援ができるよう、鋭意スキルアップに励んでいる。</p>
   </div>     
   <div class="imgbox">
@@ -83,12 +85,13 @@
    </div>
   
   <div class="bannerbox">
-   <div id="logo"><a href="https://xs311218.xsrv.jp/sample/elementor-1037/">
+   <div id="logo">
     <img id="ranpulogo" src="https://kyo-frontend.github.io/portfolio/らんぷ.png" >
     </a></div>
     <div class ="bannertext" id="bannertextR">
     <p class="bannertitle">ABOUT</p>
-    東海地区を中心に多店舗展開している、本格派のカフェチェーン「らんぷ」のホームページを参考に作成してみました。明治時代をイメージした古民家風の建物はレトロな雰囲気を演出させて人気のあるお店です。トップページと４つの下層ページを作って、リンクでページ遷移ができるようにしました。
+    東海地区を中心に多店舗展開している、本格派のカフェチェーン「らんぷ」のホームページを参考に作成してみました。
+    以下トップページと４つの下層ページを作りました。画像をクリックすると、サブページに切り替わります。
     </div>
   </div>
 
@@ -140,7 +143,7 @@ position: relative;}
     width: 350px; height: 350px;
     transform: rotate(135deg);
     margin-top: 100px;
-    margin-left: 120px;
+    margin-left: 140px;
     opacity: 0;
     animation-name: slidedaiya;
     animation-duration: 3s;
@@ -158,17 +161,16 @@ position: relative;}
      position: absolute; top: -20px; left: 280px;
 }
 .profbox{
-    background-color: white;
+    background-color: black;
     width : 800px;  height: 500px;
-    border: 2px solid black;
+    border: 2px solid rgb(239, 10, 10);
     margin-top: -100px; margin-left: 330px;
     margin-right: 260px;
     position: relative; 
     z-index: 2;
 }
-.proftitle{color: #CC0066;
-     font-family: serif;
-     font-size: 60px;
+.proftitle{color: #CC0066; font-family: serif;
+     font-size: 60px; text-shadow: 1px 1px white;
      margin-top: 20px;
      opacity: 0;
      animation-name: slideAppear;
@@ -185,14 +187,14 @@ position: relative;}
     60%,80%,100% {opacity: 1;}
 }
 
-.proftext{width: 450px;
+.proftext{width: 480px; color: white;
 margin-top: -50px;/* VSコード用のmargin*/
 margin-left: 40px;
-font-size: 120%;
+font-size: 118%;
 }
 .imgbox{width: 350px; height:  480px;
   box-shadow: 0 0 10px #333;
-  position: absolute; top: 150px; left: 850px;
+  position: absolute; top: 150px; left: 870px;
    z-index: 3;
    opacity: 0;
    overflow: hidden;
@@ -234,11 +236,9 @@ font-size: 120%;
   100% {transform: translateY(-100%);}
 }
 
-.skillbox{width: 800px;
-height: 500px;
-margin-top: 50px;
-margin-left: 220px;
-margin-bottom: 50px;
+.skillbox{width: 800px; height: 500px; color: white;
+margin-top: 50px; margin-left: 220px; margin-bottom: 50px;
+background-color: rgb(10, 1, 28);
 border: 2px solid black; 
 z-index: 4;
 }
@@ -249,8 +249,8 @@ z-index: 4;
 }
 #xdimage{margin-top: -50px;
   margin-left: 300px;}
-.skilltext{margin-top: 20px; margin-left: 40px;
-  width: 90%; font-size: 125%;}
+.skilltext{margin-top: 20px; margin-left: 40px; 
+  width: 90%; font-size: 120%;}
 .backColorR{
     background: linear-gradient(to bottom right, #FF367F, #FF5F17);
     width: 350px; height: 400px; 
@@ -387,15 +387,14 @@ cursor:pointer;}
 #fourthimg{display:none;}
 
 .lastbox {width: 900px; height: 400px;
-background-color: white;
+background-color: rgb(228, 12, 12);
 margin-top: 300px; margin-left: 150px;
 border: 2px solid black; 
 position: relative;
 z-index: 1;
 }
-.lastTitle{color: #CC0066;
-     font-family: serif;
-     font-size: 60px;
+.lastTitle{color: #cee429; text-shadow: 1px 1px white;
+     font-family: serif; font-size: 60px;
      margin-top: 20px;
      opacity: 0;}
 .again{  animation-name: slideAgain;
