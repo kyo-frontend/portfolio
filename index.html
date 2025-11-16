@@ -43,7 +43,7 @@
  </div>
 
  <div class="backColorBa">
-  <div class="flowsen">Banner　バナー制作</div>
+  <div class="flowsen">Website制作</div>
 </div>
 
 <div class="bannerbox">
@@ -66,7 +66,7 @@
    <div id ="logo"><a href="https://kyo-frontend.github.io/youngcarer/">
     <img id="carlerlogo" src="https://kyo-frontend.github.io/portfolio/若者ケアラーLOGO.png" ></a>
    </div>
-<div class ="bannertext" id="bannertextK">
+  <div class ="bannertext" id="bannertextK">
     <p class="bannertitle">ABOUT</p>
     元ヤングケアラーたちとの座談会での交流を踏まえ、若者ケアラーのオリジナルサイトを作りました。
     ヤングケアラーの知名度が増してきていて、若者ケアラーはそのひとつ上の世代にあたり、埼玉県大宮市、静岡県浜松市での交流会に参加しています<br>
@@ -78,7 +78,7 @@
     <div id ="logo"><a href="https://kyo-frontend.github.io/rockman-battle/">
      <img id="rockmanlogo" src="https://kyo-frontend.github.io/portfolio/ロックマンXD.png" ></a>
     </div>
- 　<div class ="bannertext" id="bannertextRo">
+    <div class ="bannertext" id="bannertextRo">
      <p class="bannertitle">ABOUT</p>
     子どもの頃に夢中になった「ロックマン」の世界観をモチーフに、ゲーム風のJavaScriptアニメーションを制作しました。
     キャラクターの登場・攻撃・消失といった一連の演出をCSSアニメーションとJavaScript（setTimeout・classの切り替え）を組み合わせて実現しています。
@@ -108,8 +108,7 @@
 
  <div class="ranpuRbox">
    <p class="explan"><span class="worktitle">TOP PAGE</span><br>
-     JavaScriptを使って背景画像を時間差で別の画像に変えたり、手動で切り替えできるように設定しました。<br>
-     ページの右上と最下層にメニューバーを設定し、他のページにも移れるようにしました。</p>
+    メニューバーやトップ画像に文章を縦書きで表示するなど、レイアウトを工夫しました。</p>
    <div id="btn_box">
     <div id="btn">＞　トップ画像へ戻る</div>
    </div>
@@ -117,7 +116,7 @@
     <p class="explan"><span class="worktitle">SUBPAGE</span><br> 
      バナーをクリックすると画像が切り替わります。</p>
      <div class="aiconbox">
-    <img id="kodawariimg" src="https://kyo-frontend.github.io/portfolio/こだわり.png">
+      <img id="kodawariimg" src="https://kyo-frontend.github.io/portfolio/こだわり.png">
       <img id="saiyouimg" src="https://kyo-frontend.github.io/portfolio/採用情報(文字加工済).png">
       <img id="otoiawaseimg" src="https://kyo-frontend.github.io/portfolio/お問い合わせ用（文字加工）.png">
      </div> 
@@ -277,14 +276,15 @@ z-index: 4;
 .backColorBa{width: 100vw; height: 10vh;
   font-size: 7vh; font-family: Georgia;
   overflow: hidden; position: relative;
-  background: linear-gradient(to bottom right, #FF367F, #FF5F17);
+  background: linear-gradient(to bottom right, #f42462, #f52779);
   color:white; padding: 20px;
   text-align: center;
   z-index: 3; margin-bottom: 50px;
 }
 
 .flowsen {animation: flowText 13s linear infinite;
-    text-shadow: 2px 1px #c7edff, 4px 2px #9acee7;}
+  font-family: 游明朝;
+    text-shadow: 2px 1px #f80404, 4px 2px #ee0606;}
 @keyframes flowText {
   0% {transform: translateX(500px);}
     100% {transform: translateX(-100%);}
@@ -336,16 +336,15 @@ color: #FF0033;}
 
 .hiddenpage{position: relative;}
 #page{display: none; position: relative;
+margin: 0 auto;  
 z-index: 1; object-fit: cover;
-width: 95%;}
-#buttonbox {position: absolute; top: 20px; right: 100px;
+width: 80%;}
+#buttonbox {position: absolute; top: 20px; right: 150px;
             display: none; cursor: pointer;
-            background-color: #663300;
+            background-color: #1d0236;
             padding: 3px;
-            width: 50px; height: 50px;
+            width: 40px; height: 40px;
             z-index: 5;
-            border-bottom: 4px solid #004400;
-            border-right: 4px solid #004400;
              border-radius: 50%;
             animation: slidebatsu 6s linear infinite;
         }
@@ -356,13 +355,14 @@ width: 95%;}
  75%{transform:translate(70px,0px)}
  100%{transform:translateX(0)}
 }
-#closeButton{font-size: 30px;
-margin-left: 14px; margin-top: 30px;
-color: white;}
+#closeButton{font-size: 20px; 
+color: white;
+position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);}
 .flexboxTop{display: flex;
  margin-left: 50px;}
-.ranpuImg img {width: 70vw;}
-.ranpuRbox{margin-left: 50px; width: 25vw;}
+.ranpuImg img {width: 60vw;}
+.ranpuRbox{margin-left: 50px; width: 30vw;}
 .explan{font-size: 120%; margin-bottom: 20px;}
 #btn_box{width: 200px; height: 50px;
     background-color: #FF4F02;
@@ -385,7 +385,7 @@ color: white;}
 color: #006600;
 font-family: Georgia;
 }
-.switchimg img{width: 300px; height: 300px;
+.switchimg img{width: 200px; height: 200px;
 margin-top: 30px; object-fit: cover;
 cursor:pointer;}
 #secondimg{display:none;}
