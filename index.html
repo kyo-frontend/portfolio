@@ -7,7 +7,7 @@
   <div class="namebox">
     <div class="backColor"></div> 
   </div>
-   
+
  <div class="profbox">
    <p class="proftitle">　PROFILE</p>
    <p class="proftext">大学卒業後は政府系金融機関で事業性融資の仕事に携わっていたが、家族の高齢化により家族のケアと仕事の両立が難しくなり、
@@ -60,6 +60,7 @@
 
   <div class="hiddenpage">
    <img id= "page"src="https://kyo-frontend.github.io/portfolio/スポナゴ切り取りimg.png" >
+   <div id="overlay"></div>
    <div id="buttonbox"><span id="closeButton">✕</span></div>
   </div>
 
@@ -138,6 +139,7 @@
     <img id="reverseimg" src="https://kyo-frontend.github.io/portfolio/天橋立.JPG"></div>
 </div>
  </html>
+
 <style>
 body{box-sizing: border-box;}
 .allContainer{max-width: 1000px;
@@ -159,17 +161,12 @@ position: relative;}
   100% {transform: rotate(135deg)scale(1);
         opacity: 1;}
   }
-.namebox{font-weight: bold; font-family: serif;
-     font-size: 60px; color: white;
-     position: absolute; top: -20px; left: 280px;
-}
-.nametitle{font-weight: bold; font-size: 120px; 
-text-shadow: 1px 1px rgb(218, 239, 23);}
+
 .profbox{
     background-color: black;
     width : 800px;  height: 500px;
     border: 2px solid rgb(239, 10, 10);
-    margin-top: -80px; margin-left: 330px;
+    margin-top: -180px; margin-left: 330px;
     margin-right: 260px;
     position: relative; 
     z-index: 2;
@@ -335,9 +332,14 @@ color: #FF0033;}
 .teachP{border-bottom: double 6px #FF367F;}
 
 .hiddenpage{position: relative;}
+#overlay {position: absolute; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(15, 3, 3, 0.6); /* 背景を暗く */
+  z-index: 1;
+}
 #page{display: none; position: relative;
 margin: 0 auto;  
-z-index: 1; object-fit: cover;
+z-index: 2; object-fit: cover;
 width: 80%;}
 #buttonbox {position: absolute; top: 20px; right: 150px;
             display: none; cursor: pointer;
