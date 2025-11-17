@@ -4,9 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
  <div class="allContainer">
-  <div class="backColor"></div> 
   <div class="namebox">
-    <p class="nametitle">京</p></div>
+    <div class="backColor"></div> 
+  </div>
+   
  <div class="profbox">
    <p class="proftitle">　PROFILE</p>
    <p class="proftext">大学卒業後は政府系金融機関で事業性融資の仕事に携わっていたが、家族の高齢化により家族のケアと仕事の両立が難しくなり、
@@ -141,13 +142,12 @@
 body{box-sizing: border-box;}
 .allContainer{max-width: 1000px;
 position: relative;}
-
+.namebox{position: relative; margin-top: 150px;
+  margin-left: 140px;}
 .backColor{
     background: linear-gradient(to bottom right, #FF367F, #FF5F17);
     width: 350px; height: 350px;
     transform: rotate(135deg);
-    margin-top: 100px;
-    margin-left: 140px;
     opacity: 0;
     animation-name: slidedaiya;
     animation-duration: 3s;
