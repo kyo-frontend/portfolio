@@ -24,8 +24,7 @@
    <div class="skillbox">
       <p class="proftitle">　MY SKILL</p>
       <ul> 
-        <li>HTML</li>
-        <li>CSS</li>
+        <li>HTML, CSS</li>
         <li>JAVASCRIPT（簡易なもの）</li>
         <li>WORDPRESS</li>
         <li>Photoshop</li>
@@ -35,7 +34,9 @@
          こんな動きを実装したい、などイメージを具現化して表現することが好き。
          HTML・CSSを使用したコーディングによるWEBサイトを作成できる。文字や画像の配置、アニメーション効果など、ユーザーにとって見やすく使いやすいデザインを意識している。<br>
          JavaScriptでは、テキストやキャラクターのアニメーション、ボタンクリックによる画面遷移などを実装できる。
-         実際の作品にも積極的に取り入れ、動きのある表現を加えることで、より印象に残るサイト作りを目指している。rubyの基礎も同時に学習中。<br>
+         実際の作品にも積極的に取り入れ、動きのある表現を加えることで、より印象に残るサイト作りを目指している。<br>
+         Photoshopを使用し、キャラクターのイラスト制作、画像合成、グラデーションや光彩効果などを用いた文字アレンジによるグラフィック制作ができる。
+         ポスターや缶バッジ風デザインなど、レイヤー調整や不透明度を調整したデザインができる。<br>
          金融業界で長年勤めていた経験も活かしながら、融資の考え方や経営面についてもアドバイスできることが強み。
       </p>
      </div>
@@ -43,10 +44,11 @@
 
  </div>
 
-<div class="explanGrafic">
+<div class="overlay"></div>
+ <div class="explanGrafic">
   <span class="titletext">　Graphic制作　</span>
-</div>
-<p class="subInfo">
+ </div>
+ <p class="subInfo">
   以下の制作物はアフターネオ名古屋で制作したものです。 / 使用ソフト：Photoshop</p>
 <div class="graficPortfolio">
   <img id="senandtihiro" src="https://kyo-frontend.github.io/portfolio/千と千尋の神隠し_1200px.png" >
@@ -62,6 +64,7 @@
   <img id="eren" src="https://kyo-frontend.github.io/portfolio/エレン.png" >
   <img id="fiveraiout" src="https://kyo-frontend.github.io/portfolio/5分割レイアウト（ガンダム）.png" >
   <img id="arts" src="https://kyo-frontend.github.io/portfolio/デジタルアーツ缶バッジ.png" >
+</div>
 </div>
 
 <div class="explanWebsite">
@@ -313,7 +316,19 @@ z-index: 4;
   justify-content: space-around; align-items: center;
   flex-wrap: wrap;
 }
-.graficPortfolio img{width: 30%;}
+.bigger{position: fixed;  /* 画像クリックしたときの効果 */
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) scale(1.3);
+  z-index: 10;
+}
+.graficPortfolio img{width: 30%; }
+.overlay { position: fixed;
+  inset: 0; background: rgba(0, 0, 0, 0.6);
+  z-index: 9;
+  display: none;
+}
+.overlay.active {display: block;}
+  
 .explanWebsite{width: 100vw; height: 10vh;
   font-size: 7vh; 
   overflow: hidden; position: relative;
@@ -560,7 +575,20 @@ imgbox.addEventListener('animationend', () => {
   curtain.classList.add('plusAnimeC');
   bari.classList.add('plusAnimeB'); 
 });
+// グラフィック作品のアニメーション
+const graficimages = document.querySelectorAll('.graficPortfolio img');
+const overlay = document.querySelector('.overlay');
+graficimages.forEach(img => {
+  img.addEventListener('click', function () {
+    img.classList.add('bigger');
+    overlay.classList.add('active');
 
+    setTimeout(() => {
+      img.classList.remove('bigger');
+      overlay.classList.remove('active');
+    }, 3000);
+  });
+});
 //スポナゴの画像及び表示
     const suponagoPage = document.getElementById('page')
     const logo = document.getElementById('logo') 
